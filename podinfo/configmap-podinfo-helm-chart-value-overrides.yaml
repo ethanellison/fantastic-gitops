@@ -37,8 +37,7 @@ data:
     service:
       enabled: true
       annotations: {}
-      type: LoadBalancer
-      loadBalancerIP: 10.10.10.11
+      type: ClusterIP
       metricsPort: 9797
       httpPort: 9898
       externalPort: 9898
