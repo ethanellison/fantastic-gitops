@@ -4,6 +4,6 @@ metadata:
   name: bgppeer-10.10.10.1
   namespace: metallb-system
 spec:
-  myASN: 64512
-  peerASN: 64513
+  myASN: 64513
+  peerASN: 64512
   peerAddress: 10.10.10.1
