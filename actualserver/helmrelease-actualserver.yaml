@@ -7,7 +7,7 @@ spec:
   chartref:
     kind: OCIRepository
     name: actualserver
-    namespace: budget
+    namespace: flux-system
   interval: 15m
   timeout: 5m
   values:
