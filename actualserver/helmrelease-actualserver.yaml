@@ -4,15 +4,13 @@ metadata:
   name: actualserver
   namespace: budget
 spec:
-  chartref:
+  chartRef:
     kind: OCIRepository
     name: actualserver
     namespace: flux-system
   interval: 15m
   timeout: 5m
-  values:
-    replicaCount: 1
-  # valuesFrom:
-  # - kind: ConfigMap
-  #   name: actualserver-helm-chart-value-overrides
-  #   valuesKey: values.yaml # This is the default, but best to be explicit for clarity
+  valuesFrom:
+  - kind: ConfigMap
+    name: actualserver-helm-chart-value-overrides
+    valuesKey: values.yaml # This is the default, but best to be explicit for clarity
