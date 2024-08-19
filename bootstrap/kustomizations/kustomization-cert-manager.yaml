@@ -4,8 +4,6 @@ metadata:
   name: cert-manager
   namespace: flux-system
 spec:
-  dependsOn:
-    - name: cert-manager
   interval: 15m
   path: ./cert-manager
   prune: true # remove any elements later removed from the above path
