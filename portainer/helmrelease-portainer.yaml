@@ -13,7 +13,7 @@ spec:
         kind: HelmRepository
         name: portainer
         namespace: flux-system
-      version: '2.x'
+      version: '>2.0'
   interval: 15m0s
   # valuesFrom:
   #   - kind: ConfigMap
