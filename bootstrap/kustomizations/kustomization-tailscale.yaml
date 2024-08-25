@@ -1,0 +1,19 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: tailscale
+  namespace: flux-system
+spec:
+  interval: 15m
+  path: ./tailscale
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  timeout: 2m0s
+  healthChecks:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: tailscale-operator
+      namespace: tailscale

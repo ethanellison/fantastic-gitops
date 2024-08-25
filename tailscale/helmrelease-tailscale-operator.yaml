@@ -1,0 +1,21 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: tailscale-operator
+  namespace: tailscale
+spec:
+  chart:
+    spec:
+      chart: tailscale-operator
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: tailscale
+        namespace: flux-system
+      version: 0.X
+  interval: 15m0s
+  # valuesFrom:
+  #   - kind: ConfigMap
+  #     name: portainer-helm-chart-value-overrides
+  #     valuesKey: values.yaml
