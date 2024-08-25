@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: podinfo-helm-chart-value-overrides
+  namespace: podinfo
+data:
+  values.yaml: |-
+    persistence:
+      enabled: true
+    service:
+      type: LoadBalancer
+      httpPort: 9000
+      httpNodePort: 30777
+ 
