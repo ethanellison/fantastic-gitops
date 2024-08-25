@@ -2,8 +2,8 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   creationTimestamp: null
-  name: podinfo-helm-chart-value-overrides
-  namespace: podinfo
+  name: portainer-helm-chart-value-overrides
+  namespace: portainer
 data:
   values.yaml: |-
     persistence:
