@@ -55,9 +55,9 @@ data:
 
       securityContext: {}
 
-      extraEnv: []
-      # - name: EXTRA_VAR1
-      #   value: "value1"
+      extraEnv:
+      - name: OPERATOR_INITIAL_TAGS
+        value: "k8s-operator"
       # - name: EXTRA_VAR2
       #   value: "value2"
 
