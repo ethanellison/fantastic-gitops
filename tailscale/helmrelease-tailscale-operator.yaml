@@ -15,7 +15,7 @@ spec:
         namespace: flux-system
       version: 0.X
   interval: 15m0s
-  # valuesFrom:
-  #   - kind: ConfigMap
-  #     name: portainer-helm-chart-value-overrides
-  #     valuesKey: values.yaml
+  valuesFrom:
+    - kind: ConfigMap
+      name: tailscale-operator-helm-chart-value-overrides
+      valuesKey: values.yaml
