@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: bitnami
-        namespace: flux-sysytem
+        namespace: flux-system
       version: '>11.0.0'
   interval: 15m0s
   releaseName: apache-web
