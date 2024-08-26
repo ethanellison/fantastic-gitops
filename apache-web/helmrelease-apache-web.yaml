@@ -1,0 +1,22 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: apache-web
+  namespace: web
+spec:
+  chart:
+    spec:
+      chart: apache
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: flux-sysytem
+      version: '>11.0.0'
+  interval: 15m0s
+  releaseName: apache-web
+  valuesFrom:
+    - kind: ConfigMap
+      name: apache-web-helm-chart-value-overrides
+      valuesKey: values.yaml
