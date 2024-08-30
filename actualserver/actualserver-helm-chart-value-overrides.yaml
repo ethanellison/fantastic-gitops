@@ -12,7 +12,7 @@ data:
     service:
       annotations:
         tailscale.com/expose: "true"
-        tailscale.com/hostname: "budget"
+        tailscale.com/hostname: "actual"
       type: LoadBalancer
       # main:
         # ports:
