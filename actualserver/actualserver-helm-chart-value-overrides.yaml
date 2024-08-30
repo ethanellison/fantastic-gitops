@@ -13,10 +13,10 @@ data:
       annotations:
         tailscale.com/expose: "true"
         tailscale.com/hostname: "actual"
-      type: LoadBalancer
-      # main:
-        # ports:
-        #   main:
-        #     port: 10293
-        #     protocol: http
-        #     targetPort: 5006
+    #   type: LoadBalancer
+    #   main:
+    #     ports:
+    #       main:
+    #         port: 10293
+    #         protocol: http
+    #         targetPort: 5006
