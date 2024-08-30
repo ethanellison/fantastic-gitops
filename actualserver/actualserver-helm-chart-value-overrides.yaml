@@ -10,9 +10,12 @@ data:
     values:
       replicaCount: 1
     service:
+      annotations:
+        tailscale.com/expose: "true"
+        tailscale.com/hostname: "budget"
       main:
         ports:
           main:
             port: 10293
-            protocol: https
+            protocol: http
             targetPort: 5006
