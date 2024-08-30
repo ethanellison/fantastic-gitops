@@ -30,7 +30,7 @@ data:
       type: LoadBalancer
       annotations:
         tailscale.com/expose: "true"
-        tailscale.com/hostname: portainer
+        tailscale.com/hostname:"portainer"
       # httpPort: 9000
       # httpNodePort:
       # edgePort: 8000
