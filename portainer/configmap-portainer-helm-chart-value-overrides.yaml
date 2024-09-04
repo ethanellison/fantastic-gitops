@@ -27,22 +27,26 @@ data:
       # Set the httpNodePort and edgeNodePort only if the type is NodePort
       # For Ingress, set the type to be ClusterIP and set ingress.enabled to true
       # For Cloud Providers, set the type to be LoadBalancer
-      type: LoadBalancer
-      annotations:
-        tailscale.com/expose: "true"
-        tailscale.com/hostname:"portainer"
+      type: ClusterIP
+      # annotations:
+      #   tailscale.com/expose: "true"
+      #   tailscale.com/hostname:"portainer"
       # httpPort: 9000
       # httpNodePort:
       # edgePort: 8000
       # edgeNodePort:
 
     ingress:
-      enabled: false
-      annotations: {}
-      hosts:
-        - host:
-          paths: []
-      tls: []
+      enabled: true
+      ingressClassName: tailscale
+      annotations: 
+        tailscale.com/funnel: "true"
+      # hosts:
+      #   - host:
+      #     paths: []
+      tls:
+        - hosts:
+          - portainer
 
     resources: {}
 
