@@ -16,7 +16,7 @@ spec:
       version: '>11.0.0'
   interval: 15m0s
   releaseName: apache-web
-  valuesFrom:
-    - kind: ConfigMap
-      name: apache-web-helm-chart-value-overrides
-      valuesKey: values.yaml
+  # valuesFrom:
+  #   - kind: ConfigMap
+  #     name: apache-web-helm-chart-value-overrides
+  #     valuesKey: values.yaml
