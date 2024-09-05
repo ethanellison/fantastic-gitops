@@ -10,6 +10,6 @@ spec:
     - actualserver
   defaultBackend:
     service:
-      name: actual
+      name: actualserver
       port:
         number: 5006
