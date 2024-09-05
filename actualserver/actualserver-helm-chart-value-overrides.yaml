@@ -9,10 +9,10 @@ data:
     # Default values for podinfo.
     values:
       replicaCount: 1
-    service:
-      annotations:
-        tailscale.com/expose: "true"
-        tailscale.com/hostname: "actual"
+    # service:
+    #   annotations:
+    #     tailscale.com/expose: "true"
+    #     tailscale.com/hostname: "actual"
     #   type: LoadBalancer
     #   main:
     #     ports:
