@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ts-ingress-apache
+  namespace: web
+spec:
+  ingressClassName: tailscale
+  tls:
+  - hosts:
+    - apache
+  defaultBackend:
+    service:
+      name: apache-web
+      port:
+        number: 443
